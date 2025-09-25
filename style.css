@@ -29,7 +29,7 @@ h1{
 }
 .todoapp{
     width: 100%;
-    max-width: 450px;
+    max-width: 520px;
     background: white;
     margin: 100px auto 20px;
     padding:40px 30px 50px ;
@@ -113,3 +113,4 @@ ul li span:hover{
 background: #edeef0;
 
 }
+
