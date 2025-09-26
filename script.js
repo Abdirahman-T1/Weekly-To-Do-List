@@ -7,9 +7,9 @@ const listContainer2 = document.getElementById("list-2");
 const listContainer3 = document.getElementById("list-3");
 const listContainer4 = document.getElementById("list-4");
 
-function addTask(day){
-    const inputBox = document.getElementById(`inputbox-${day}`);
-    const listContainer = document.getElementById(`list-${day}`); 
+function addTask(week){
+    const inputBox = document.getElementById(`inputbox-${week}`);
+    const listContainer = document.getElementById(`list-${week}`); 
     if(inputBox.value === "" ){
         alert("you must write something");
     }else{
@@ -23,7 +23,7 @@ function addTask(day){
    inputBox.value= "";
    saveData()
 }
-for (let i = 1; i <= 7; i++) {
+for (let i = 1; i <= 4; i++) {
   const listContainer = document.getElementById(`list-${i}`);
 listContainer.addEventListener("click", function(e){
 if(e.target.tagName === "LI"){
@@ -36,7 +36,7 @@ saveData();
 }, false);
 }
 function saveData(){
-    for (let i = 1; i <= 7; i++) {
+    for (let i = 1; i <= 4; i++) {
   const listContainer = document.getElementById(`list-${i}`);
     localStorage.setItem(`data-${i}`,listContainer.innerHTML);
     }
